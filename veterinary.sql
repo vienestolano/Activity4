@@ -18,3 +18,11 @@ CREATE TABLE animals(
    gender VARCHAR(10) NOT NULL,
    color VARCHAR(50) NOT NULL,
    ownerid INT,foreign key (ownerid) references owners(ownerid));
+
+   CREATE TABLE Appointments (
+    appointid INT PRIMARY KEY,
+    animalid INT,
+    appointdate DATE,
+    reason VARCHAR(255),
+    FOREIGN KEY (animalid) REFERENCES Animals(animalid)
+);
